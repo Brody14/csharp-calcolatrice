@@ -96,14 +96,22 @@ namespace csharp_calcolatrice_bonus
          * ritorna la base elevata all’esponente.
         Occhio che sia la base che l’esponente potrebbero essere uguali a zero oppure numeri negativi! (caso esponente = 0 e base = 0 
         anche se in matematica sarebbe un numero indefinito usiamo l’approccio informatico che lo calcola come 1)*/
-        public static double Exponent(int baseNumber, int exponentNumber)
+        public static double Power(int baseNumber, int exponentNumber)
         {
             if(baseNumber == 0 && exponentNumber == 0)
             {
                 return 1;
             }
 
-            return Math.Pow(baseNumber, exponentNumber);
+            double result = baseNumber;
+
+            for (int i = 1; i < exponentNumber; i++)
+            {
+                
+                result *= baseNumber;
+              
+            }
+            return result;
         }
 
     }
