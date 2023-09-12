@@ -56,42 +56,82 @@ namespace csharp_calcolatrice
 
         public static int IntAbsoluteValue(int a)
         {
-            return Math.Abs(a);
+           if(a < 0)
+            {
+                return (-1) * a;
+            }else
+            {
+                return a;
+            }
         }
 
         //Valore assoluto di un numero double
 
         public static double DoubleAbsoluteValue(double a)
         {
-            return Math.Abs(a);
+            if (a < 0)
+            {
+                return (-1) * a;
+            }
+            else
+            {
+                return a;
+            }
         }
 
         //Minimo tra due numeri interi
 
         public static int IntMin(int a, int b)
         {
-            return Math.Min(a, b);
+            if(a > b)
+            {
+                return b;
+            }else
+            {
+                return a;
+            }
         }
 
         //Minimo tra due numeri double
 
         public static double DoubleMin(double a, double b)
         {
-            return Math.Min(a, b);
+            if (a > b)
+            {
+                return b;
+            }
+            else
+            {
+                return a;
+            }
         }
 
         //Massimo tra due numeri interi
 
         public static int IntMax(int a, int b)
         {
-            return Math.Max(a, b);
+            if (a > b)
+            {
+                return a;
+            }
+            else
+            {
+                return b;
+            }
         }
 
         //Massimo tra due numeri double
 
         public static double DoubleMax(double a, double b)
         {
-            return Math.Max(a, b);
+            if (a > b)
+            {
+                return a;
+            }
+            else
+            {
+                return b;
+            }
         }
 
         /*Il fatto di dover scrivere lo stesso metodo per tipi di parametro diversi applica nella pratica uno dei principi 
